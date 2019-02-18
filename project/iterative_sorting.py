@@ -13,13 +13,23 @@ def selection_sort(arr):
 
 # TO-DO: implement the Insertion Sort function below
 def insertion_sort(arr):
-
+    for i in range(1, len(arr)):
+        cur = arr[i]
+        j = i
+        while j > 0 and arr[j - 1] > cur:
+            arr[j] = arr[j-1]
+            j = j - 1
+        arr[j] = cur
     return arr
 
 
 # STRETCH: implement the Bubble Sort function below
 def bubble_sort(arr):
-
+    n = len(arr)
+    for i in range(n):
+        for j in range(n - i - 1):
+            if arr[j] > arr[j+ 1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
 
 
