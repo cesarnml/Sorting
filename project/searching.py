@@ -11,10 +11,8 @@ def linear_search(arr, target):
 
 
 def binary_search(arr, target):
-
     if len(arr) == 0:
         return -1  # array empty
-
     low = 0
     high = len(arr)-1
 
