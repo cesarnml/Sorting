@@ -26,10 +26,13 @@ def insertion_sort(arr):
 # STRETCH: implement the Bubble Sort function below
 def bubble_sort(arr):
     n = len(arr)
-    for i in range(n):
-        for j in range(n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    is_sorted = False
+    while not is_sorted:
+        is_sorted = True
+        for i in range(n - 1):
+            if arr[i] > arr[i + 1]:
+                arr[i], arr[i + 1] = arr[i + 1], arr[i]
+                is_sorted = False
     return arr
 
 
